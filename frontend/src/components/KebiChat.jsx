@@ -2,8 +2,8 @@ import { useState } from "react";
 import "./KebiChat.css";
 
 import room from "../assets/RuangKebi.png";
-import kebiMenyapa from "../assets/kebi/Menyapa.png";
-import kebiCry from "../assets/kebi/Sedih.png";
+import kebiMenyapa from "../assets/Kebi/Menyapa.png";
+import kebiCry from "../assets/Kebi/Sedih.png";
 
 function KebiChat({ setPage }) {
     const [message, setMessage] = useState("");
