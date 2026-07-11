@@ -1,42 +1,124 @@
 function Profile({
   cisScore,
+  level,
   progress,
   badge,
   setPage,
+  setIsLogin
 }) {
   return (
-    <div className="dashboard">
-      <h1>👤 Profil Saya</h1>
 
-      <div className="card">
-        <h3>Nama</h3>
-        <p>Nala</p>
-      </div>
+<div className="profile-page">
 
-      <div className="card">
-        <h3>Level</h3>
-        <p>3</p>
-      </div>
+<div className="profile-cover"></div>
 
-      <div className="card">
-        <h3>CIS Score</h3>
-        <p>{cisScore}</p>
-      </div>
+<div className="profile-header">
 
-      <div className="card">
-        <h3>Progress</h3>
-        <p>{progress}%</p>
-      </div>
+<div className="profile-avatar">
+👤
+</div>
 
-      <div className="card">
-        <h3>Badge</h3>
-        <p>{badge ? badge : "Belum Ada Badge"}</p>
-      </div>
+<div className="profile-info">
 
-      <button onClick={() => setPage("dashboard")}>
-        ← Kembali
-      </button>
-    </div>
+<h2>Nala</h2>
+
+<p>🌟 Anggota Aktif</p>
+
+</div>
+
+</div>
+
+<div className="profile-stats">
+
+<div className="stat-card">
+
+<h3>💚</h3>
+
+<h2>{cisScore}</h2>
+
+<p>CIS Score</p>
+
+</div>
+
+<div className="stat-card">
+
+<h3>⭐</h3>
+
+<h2>{level}</h2>
+
+<p>Level</p>
+
+</div>
+
+<div className="stat-card">
+
+<h3>📈</h3>
+
+<h2>{progress}%</h2>
+
+<p>Progress</p>
+
+</div>
+
+</div>
+
+<div className="profile-box about-box">
+
+  <h3>🌿 Tentang Saya</h3>
+
+  <p>
+    Sedang mengembangkan kemampuan kepemimpinan koperasi melalui pembelajaran di KOPGEN.
+  </p>
+
+</div>
+
+<div className="profile-box">
+
+<h3>🏅 Badge</h3>
+
+<p>{badge ? badge : "Belum memiliki badge."}</p>
+
+</div>
+
+<div className="profile-box">
+
+<h3>📌 Aktivitas Terbaru</h3>
+
+<ul className="activity-list">
+
+<li>📚 Menyelesaikan Modul 1</li>
+
+<li>🔥 Login 7 Hari Berturut</li>
+
+<li>💚 Mendapat +20 CIS</li>
+
+</ul>
+
+</div>
+
+<button
+className="logout-button"
+onClick={()=>{
+setIsLogin(false);
+setPage("dashboard");
+}}
+>
+
+🚪 Log Out
+
+</button>
+
+<button
+className="back-button"
+onClick={()=>setPage("dashboard")}
+>
+
+← Kembali
+
+</button>
+
+</div>
+
   );
 }
 

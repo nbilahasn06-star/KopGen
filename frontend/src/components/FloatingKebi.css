@@ -1,0 +1,135 @@
+.kebi-button {
+  position: fixed;
+
+  right: 18px;
+  bottom: 90px;
+
+  width: 90px;
+  height: 90px;
+
+  border: none;
+  background: transparent;
+
+  cursor: pointer;
+
+  z-index: 999;
+
+  transition: transform 0.3s ease;
+}
+
+.kebi-button:hover {
+  transform: scale(1.08);
+}
+
+.kebi-button img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.kebi-popup{
+    position: fixed;
+
+    right: 90px;
+    bottom: 135px;
+
+    width: 260px;
+
+    background: white;
+
+    border-radius: 18px;
+
+    padding: 18px;
+
+    box-shadow: 0 8px 25px rgba(0,0,0,.15);
+
+    z-index: 1000;
+
+    animation: popup .25s ease;
+}
+
+.kebi-popup::after{
+
+    content:"";
+
+    position:absolute;
+
+    right:-12px;
+
+    bottom:28px;
+
+    width:22px;
+
+    height:22px;
+
+    background:white;
+
+    transform:rotate(45deg);
+
+}
+
+.kebi-popup h4{
+
+    margin:0 0 8px;
+
+    color:#2E7D32;
+
+}
+
+.kebi-popup p{
+
+    margin-bottom:15px;
+
+    color:#555;
+
+    line-height:1.5;
+
+}
+
+.kebi-chat-btn{
+
+    width:100%;
+
+    border:none;
+
+    border-radius:12px;
+
+    padding:12px;
+
+    background:#2E7D32;
+
+    color:white;
+
+    font-weight:bold;
+
+    cursor:pointer;
+
+    transition:.25s;
+
+}
+
+.kebi-chat-btn:hover{
+
+    background:#256528;
+
+}
+
+@keyframes popup{
+
+from{
+
+transform:translateY(20px);
+
+opacity:0;
+
+}
+
+to{
+
+transform:translateY(0);
+
+opacity:1;
+
+}
+
+}

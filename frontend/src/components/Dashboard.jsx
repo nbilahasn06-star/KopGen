@@ -13,8 +13,7 @@ function Dashboard({
 
 return (
 <div className="dashboard">
-
-
+  
 {/* HEADER */}
 <div className="top-header">
 
@@ -25,7 +24,6 @@ return (
   </span>
 
 </div>
-
 
 
 {/* PROFILE */}
@@ -68,7 +66,6 @@ Terus tingkatkan kontribusimu!
 {/* LEVEL & STREAK */}
 
 <div className="stats-row">
-
 
 <div className="small-card">
 
@@ -120,10 +117,16 @@ Pertahankan terus!
 <div className="progress-area">
 
 
-<div className="circle-progress">
-
-{progress}%
-
+<div
+  className="circle-progress"
+  style={{
+    background: `conic-gradient(
+      #2E7D32 ${progress * 3.6}deg,
+      #DCEFD8 ${progress * 3.6}deg 360deg
+    )`,
+  }}
+>
+  <span>{progress}%</span>
 </div>
 
 
@@ -148,8 +151,6 @@ Kamu telah menyelesaikan
 
 
 
-
-
 {/* BADGE */}
 
 <div className="card">
@@ -162,24 +163,16 @@ Kamu telah menyelesaikan
 
 </div>
 
-
 <div className="badge-box">
 
-🏅
+  <div className="badge-icon">
+    🏅
+  </div>
 
-<div>
-
-<h4>
-{badge ? badge : "Belum Ada Badge"}
-</h4>
-
-
-<small>
-Selesaikan modul untuk mendapatkan badge
-</small>
-
-
-</div>
+  <div>
+    <h4>{badge ? badge : "Belum Ada Badge"}</h4>
+    <small>Selesaikan modul untuk mendapatkan badge</small>
+  </div>
 
 </div>
 
@@ -218,12 +211,7 @@ Mulai
 
 </button>
 
-
 </div>
-
-
-
-
 
 
 {/* BOTTOM MENU */}

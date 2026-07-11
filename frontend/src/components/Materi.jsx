@@ -11,7 +11,7 @@ function Materi({ setPage }) {
 
       <h1>📚 Apa Itu Koperasi?</h1>
 
-      <div className="card">
+      <div className="card material-card">
         <h3>📖 Definisi</h3>
 
         <p>
@@ -21,7 +21,7 @@ function Materi({ setPage }) {
         </p>
       </div>
 
-      <div className="card">
+      <div className="card material-card">
         <h3>🎯 Tujuan Koperasi</h3>
 
         <ul>
@@ -31,7 +31,7 @@ function Materi({ setPage }) {
         </ul>
       </div>
 
-      <div className="card">
+      <div className="card material-card">
         <h3>⭐ Prinsip Koperasi</h3>
 
         <ul>
@@ -42,7 +42,7 @@ function Materi({ setPage }) {
         </ul>
       </div>
 
-      <div className="card">
+      <div className="card material-card">
         <h3>💡 Tahukah Kamu?</h3>
 
         <p>

@@ -138,30 +138,34 @@ function Quiz({
 
         <h3>{question.question}</h3>
 
-        {question.options.map((option, index) => (
+        <div className="quiz-body">
 
-          <div
-            key={index}
-            style={{ marginTop: "15px" }}
-          >
+          {question.options.map((option, index) => (
 
-            <label>
+            <div
+              key={index}
+              style={{ marginTop: "15px" }}
+            >
 
-              <input
-                type="radio"
-                checked={selectedAnswer === index}
-                onChange={() => setSelectedAnswer(index)}
-              />
+              <label>
 
-              {" "}
+                <input
+                  type="radio"
+                  checked={selectedAnswer === index}
+                  onChange={() => setSelectedAnswer(index)}
+                />
 
-              {option}
+                {" "}
 
-            </label>
+                {option}
 
-          </div>
+              </label>
 
-        ))}
+            </div>
+
+          ))}
+
+        </div>
 
       </div>
 

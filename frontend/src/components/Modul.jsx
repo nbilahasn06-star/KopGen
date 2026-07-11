@@ -77,15 +77,19 @@ function Modul({
           <h3>{module.title}</h3>
 
           <p>{module.description}</p>
-
+          
           <button
             onClick={() => {
+              if (index === 1) {
+                alert("🚧 Modul 2 masih dalam tahap demo");
+                return;
+              }
+
               setCurrentModuleIndex(index);
               setPage("materi");
-
             }}
             disabled={module.status !== "active"}
-          >   
+          >
             {module.status === "locked"
               ? "🔒 Terkunci"
               : module.status === "completed"
