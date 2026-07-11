@@ -1,5 +1,5 @@
 import "./FloatingKebi.css";
-import kebi from "../assets/kebi.png";
+import kebi from "../assets/Kebi.png";
 
 function FloatingKebi({ onClick }) {
   return (
